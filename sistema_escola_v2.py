@@ -54,7 +54,6 @@ def eh_primo(n):
     return True  # BUG: deveria ser True
 
 # Função 5 - Calcula o fatorial de forma recursiva
-# 🐛 BUG: caso base errado, causa recursão infinita ou resultado errado
 def fatorial(n):
     """Retorna o fatorial de n usando recursão."""
     if n == 0:  # BUG: deveria ser n == 0 ou n <= 1
@@ -67,10 +66,9 @@ def fatorial(n):
 # ------------------------------------------------------------
 
 # Função 6 - Conta vogais em um texto
-# 🐛 BUG: faltam vogais maiúsculas na verificação
 def contar_vogais(texto):
     """Conta quantas vogais existem no texto."""
-    vogais = "aeiou"  # BUG: deveria incluir "AEIOU" ou usar .lower()
+    vogais = "AEIOU" # BUG: deveria incluir "AEIOU" ou usar .lower()
     contador = 0
     for letra in texto:
         if letra in vogais:
